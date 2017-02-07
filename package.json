@@ -1,0 +1,35 @@
+{
+  "name": "ts-algorithms",
+  "version": "0.0.1",
+  "description": "typescript data structures and algorithms",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "node ./config/test-runner.js",
+    "coverage": "istanbul cover ./config/test-runner.js",
+    "lint": "tslint --force -c ./config/tslint.json 'src/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peter-ikin/ts-algorithms.git"
+  },
+  "keywords": [
+    "typescript",
+    "algorithms"
+  ],
+  "author": "Peter Ikin<peter.ikin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peter-ikin/ts-algorithms/issues"
+  },
+  "homepage": "https://github.com/peter-ikin/ts-algorithms#readme",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.41",
+    "@types/node": "^7.0.4",
+    "istanbul": "^0.4.5",
+    "jasmine": "^2.5.3",
+    "jasmine-console-reporter": "^1.2.7",
+    "tslint": "^4.4.2",
+    "typescript": "^2.1.5"
+  }
+}
