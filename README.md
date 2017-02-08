@@ -1,6 +1,8 @@
 # ts-algorithms
 Algorithms and data structures implemented in typescript. 
 
+(Heavily work in progress)
+
 ## Usage
 
 ## Implemented Data Structures

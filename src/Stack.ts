@@ -1,4 +1,4 @@
-// Simple stack
+// Stack
 
 export class Stack<T> {
 
