@@ -5,7 +5,7 @@ class TestClass {
     public getName(): string { return this.name; }
 }
 
-describe("DoublyLinkedList should be constructable with ", () => {
+describe("LinkedList should be constructable with ", () => {
     it("primitive type number", () => {
         expect(typeof new LinkedList<number>()).toBe("object");
     });
@@ -21,4 +21,38 @@ describe("DoublyLinkedList should be constructable with ", () => {
     it("non-primitive type TestClass", () => {
         expect(typeof new LinkedList<TestClass>()).toBe("object");
     });
+
+    it("primitive type number and have an initial length of zero", () => {
+        let ll = new LinkedList<number>();
+        expect(ll.length()).toBe(0);
+    });
+});
+
+describe("LinkedList isEmpty ", () => {
+    it("should be true for newly constructed lists", () => {
+        let ll = new LinkedList<TestClass>();
+        expect(ll.isEmpty()).toBe(true);
+    });
+
+    it("should be false for lists with one item", () => {
+        let ll = new LinkedList<TestClass>();
+        ll.append(new TestClass());
+        expect(ll.isEmpty()).toBe(false);
+    });
+
+    it("should be false for lists with more than one item", () => {
+        let ll = new LinkedList<number>();
+        ll.append(12);
+        ll.append(13);
+        ll.append(16);
+        expect(ll.isEmpty()).toBe(false);
+    });
+});
+
+describe("LinkedList append method ", () => {
+   it("should increase length by 1 for primitive type number", () => {
+       let ll = new LinkedList<number>();
+       ll.append(3);
+       expect(ll.length()).toBe(1);
+   });
 });

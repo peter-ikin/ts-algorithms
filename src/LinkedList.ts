@@ -9,14 +9,35 @@ export class LinkedList<T> {
     private lastNode: ILinkedNode<T> = null; // a.k.a. tail
     private numElements: number = 0;
 
-    public append() {}
+    public append(item: T) {
+        let oldLast = this.lastNode;
+        this.lastNode = this.createNode(item);
+        if (this.isEmpty()) {
+            this.firstNode = this.lastNode;
+        } else {
+            oldLast.next = this.lastNode;
+        }
+        this.numElements++;
+    }
+
     public prepend() {}
-    public isEmpty() {}
-    public length() {}
+
+    public isEmpty() {
+        return this.numElements === 0;
+    }
+
+    public length() {
+        return this.numElements;
+    }
+
     public first() {}
     public last() {}
     public insertAfter() {}
     public insertBefore() {}
     public remove() {}
     public clear() {}
+
+    private createNode(item: T): ILinkedNode<T> {
+        return {item: item, next: null};
+    }
 }
