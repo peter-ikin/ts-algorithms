@@ -56,3 +56,17 @@ describe("LinkedList append method ", () => {
        expect(ll.length()).toBe(1);
    });
 });
+
+describe("LinkedList append '3' to empty number list ", () => {
+    it("first node should be '3'", () => {
+        let ll = new LinkedList<number>();
+        ll.append(3);
+        expect(ll.first().item).toBe(3);
+    });
+
+    it("last node should be '3'", () => {
+        let ll = new LinkedList<number>();
+        ll.append(3);
+        expect(ll.last().item).toBe(3);
+    });
+});

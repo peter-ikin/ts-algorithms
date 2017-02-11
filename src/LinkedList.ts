@@ -30,8 +30,14 @@ export class LinkedList<T> {
         return this.numElements;
     }
 
-    public first() {}
-    public last() {}
+    public first(): ILinkedNode<T> {
+        return this.firstNode;
+    }
+
+    public last(): ILinkedNode<T> {
+        return this.lastNode;
+    }
+
     public insertAfter() {}
     public insertBefore() {}
     public remove() {}
